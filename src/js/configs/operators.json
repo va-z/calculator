@@ -1,0 +1,22 @@
+[
+  {
+    "value": "+",
+    "presentation": "+"
+  },
+  {
+    "value": "-",
+    "presentation": "-"
+  },
+  {
+    "value": "*",
+    "presentation": "×"
+  },
+  {
+    "value": "/",
+    "presentation": "÷"
+  },
+  {
+    "value": "=",
+    "presentation": "="
+  }
+]
