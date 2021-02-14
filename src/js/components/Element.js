@@ -10,7 +10,12 @@ class Element {
    * @param {String} params.textContent - text inside Element
    * @param {Array<Array<String>>} params.attrs - an array of ["attr", "value"] pairs
    */
-  constructor({ tagName = ELEMENT_TAG, classNames = [], textContent = null, attrs = null } = {}) {
+  constructor({
+    tagName = ELEMENT_TAG,
+    classNames = [],
+    textContent = null,
+    attrs = null,
+  } = {}) {
     this.element = document.createElement(tagName);
     this.addClasses(classNames);
     this.addAttrs(attrs);

@@ -2,4 +2,8 @@
 @import 'variables';
 @import 'scaffolding';
 
+@import './components/app';
 @import './components/calculator';
+@import './components/screen';
+@import './components/keyboard';
+@import './components/key';

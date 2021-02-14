@@ -1,0 +1,14 @@
+.keyboard {
+  display: grid;
+  grid: auto / repeat(2, auto);
+  column-gap: 10px;
+}
+
+.keyboard__numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+}

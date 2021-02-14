@@ -1,0 +1,10 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: $widthMin;
+
+  background-color: var(--colorBg);
+  background-image: var(--imageGradientBg);
+}

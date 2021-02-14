@@ -1,4 +1,5 @@
-$widthMin: 500px;
+$widthMin: 320px;
+$widthMobileMin: 500px;
 $widthDesktopMin: 900px;
 
 :root {
@@ -6,8 +7,9 @@ $widthDesktopMin: 900px;
   --imageGradientBg: linear-gradient(45deg, #4ca1af 0%, #c4e0e5 100%);
 
   --colorCalculatorBg: #c44934;
-  --colorScreen: #8fce9e;
-  --colorScreenHistory: #64836d;
+  --colorScreenBg: #8fce9e;
+  --colorScreenHistoryBg: #64836d;
+  --colorScreenFont: #223026;
 
   --colorKeyBg: #f9fde4;
   --colorKeyBgActive: #e9f89d;
@@ -16,4 +18,6 @@ $widthDesktopMin: 900px;
   --colorKeyACBg: #2e2e2e;
   --colorKeyACBgActive: #111111;
   --colorKeyACFont: #ffffff;
+
+  --shadowCalculator: 0px 0px 20px -5px rgba(black, 0.5);
 }

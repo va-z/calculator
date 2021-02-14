@@ -1,0 +1,10 @@
+.key {
+  font-size: 20px;
+  font-family: 'IBMPlexMono', monospace;
+  width: 33%;
+  height: 40px;
+
+  &--wide {
+    width: 66%;
+  }
+}
