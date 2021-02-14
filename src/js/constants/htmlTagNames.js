@@ -1,3 +1,4 @@
 export default {
-  DIV: 'div',
+  ELEMENT_TAG: 'div',
+  KEY_TAG: 'button',
 };

@@ -2,8 +2,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  min-width: $widthMin;
   margin: 0;
 
   background-color: var(--colorBg);

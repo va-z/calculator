@@ -1,5 +1,9 @@
 [
   {
+    "value": ".",
+    "presentation": "."
+  },
+  {
     "value": "0",
     "presentation": "0"
   },
@@ -38,13 +42,5 @@
   {
     "value": "9",
     "presentation": "9"
-  },
-  {
-    "value": "0",
-    "presentation": "0"
-  },
-  {
-    "value": ".",
-    "presentation": "."
   }
 ]
