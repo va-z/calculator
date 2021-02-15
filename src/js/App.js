@@ -6,8 +6,8 @@ const { APP, APP_CALCULATOR } = cssClassNames;
 
 class App {
   constructor() {
-    this.app = Element.getDOMElement({ classNames: [APP] });
-    this.calculator = Calculator.getDOMElement({
+    this.app = Element.createDOMElement({ classNames: [APP] });
+    this.calculator = Calculator.createDOMElement({
       outerClassNames: [APP_CALCULATOR],
     });
 

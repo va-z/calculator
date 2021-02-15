@@ -7,10 +7,10 @@ class Screen extends Element {
   constructor({ outerClassNames }) {
     super({ classNames: [...outerClassNames, SCREEN] });
 
-    this.previousScreen = Element.getDOMElement({
+    this.previousScreen = Element.createDOMElement({
       classNames: [SCREEN_PREVIOUS],
     });
-    this.currentScreen = Element.getDOMElement({
+    this.currentScreen = Element.createDOMElement({
       classNames: [SCREEN_CURRENT],
     });
 

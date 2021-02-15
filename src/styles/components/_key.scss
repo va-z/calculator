@@ -1,10 +1,43 @@
 .key {
   font-size: 20px;
   font-family: 'IBMPlexMono', monospace;
-  width: 33%;
-  height: 40px;
+  border: none;
+  border-radius: 10px;
 
-  &--wide {
-    width: 66%;
+  transition: background-color 50ms linear, transform 100ms ease;
+
+  color: var(--colorKeyFont);
+  background-color: var(--colorKeyBg);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    background-color: var(--colorKeyBgHover);
+  }
+
+  &:active {
+    transform: scale(0.975);
+    box-shadow: var(--shadowKeyActive);
+  }
+
+  &--black {
+    color: var(--colorKeyBlackFont);
+    background-color: var(--colorKeyBlackBg);
+
+    &:hover,
+    &:focus {
+      background-color: var(--colorKeyBlackBgHover);
+    }
+  }
+
+  &--green {
+    color: var(--colorKeyGreenFont);
+    background-color: var(--colorKeyGreenBg);
+
+    &:hover,
+    &:focus {
+      background-color: var(--colorKeyGreenBgHover);
+    }
   }
 }

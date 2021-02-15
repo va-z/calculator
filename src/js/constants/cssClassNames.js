@@ -12,9 +12,11 @@ export default {
 
   KEYBOARD: 'keyboard',
   KEYBOARD_NUMBERS: 'keyboard__numbers',
-  KEYBOARD__OPERATORS: 'keyboard__operators',
+  KEYBOARD_NUMBERS_ZERO: 'keyboard__numbers--zero',
+  KEYBOARD_OPERATORS: 'keyboard__operators',
+  KEYBOARD_OPERATORS_EQUALS: 'keyboard__operators--equals',
 
   KEY: 'key',
-  KEY_WIDE: 'key--wide',
   KEY_BLACK: 'key--black',
+  KEY_GREEN: 'key--green',
 };

@@ -1,10 +1,20 @@
 import Element from './Element';
 import Key from './Key';
-import numberKeys from '../configs/numberKeys';
-import operatorKeys from '../configs/operatorKeys';
+import keys from '../configs/keys';
 import cssClassNames from '../constants/cssClassNames';
 
-const { KEYBOARD, KEYBOARD_NUMBERS, KEYBOARD__OPERATORS } = cssClassNames;
+const { NUMBER_KEYS, OPERATOR_KEYS } = keys;
+const { KEYBOARD, KEYBOARD_NUMBERS, KEYBOARD_OPERATORS } = cssClassNames;
+
+const generateKeys = (configsArr, wrapperClassName) => {
+  const wrapper = Element.createDOMElement({ classNames: [wrapperClassName] });
+
+  configsArr.forEach((obj) => {
+    wrapper.insertAdjacentElement('afterbegin', new Key(obj).element);
+  });
+
+  return wrapper;
+};
 
 class Keyboard extends Element {
   constructor({ outerClassNames }) {
@@ -12,26 +22,17 @@ class Keyboard extends Element {
       classNames: [...outerClassNames, KEYBOARD],
     });
 
-    const numberKeysWrapper = Element.getDOMElement({
-      classNames: [KEYBOARD_NUMBERS],
-    });
+    const numberKeysWrapper = generateKeys(NUMBER_KEYS, KEYBOARD_NUMBERS);
+    const operatorKeysWrapper = generateKeys(OPERATOR_KEYS, KEYBOARD_OPERATORS);
 
-    const operatorKeysWrapper = Element.getDOMElement({
-      classNames: [KEYBOARD__OPERATORS],
-    });
+    numberKeysWrapper.addEventListener('click', (event) => {
+      const { value } = event.target.dataset;
 
-    numberKeys.forEach((obj) => {
-      numberKeysWrapper.insertAdjacentElement(
-        'afterbegin',
-        new Key(obj).element
-      );
-    });
+      if (value === undefined) {
+        return;
+      }
 
-    Object.values(operatorKeys).forEach((obj) => {
-      operatorKeysWrapper.insertAdjacentElement(
-        'afterbegin',
-        new Key(obj).element
-      );
+      console.log(value);
     });
 
     this.element.append(numberKeysWrapper, operatorKeysWrapper);

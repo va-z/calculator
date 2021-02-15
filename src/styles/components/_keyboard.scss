@@ -2,13 +2,24 @@
   display: grid;
   grid: auto / repeat(2, auto);
   column-gap: 10px;
-}
 
-.keyboard__numbers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  &__numbers {
+    display: grid;
+    grid: repeat(4, 50px) / repeat(3, 50px);
+    gap: 3px;
 
-  width: 150px;
+    &--zero {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__operators {
+    display: grid;
+    grid: repeat(4, 50px) / repeat(2, 50px);
+    gap: 3px;
+
+    &--equals {
+      grid-column: 1 / span 2;
+    }
+  }
 }

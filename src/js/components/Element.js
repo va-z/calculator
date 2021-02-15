@@ -43,7 +43,7 @@ class Element {
    * @description Create and return new Element().element
    * @param {Object} params - Element params
    */
-  static getDOMElement(params) {
+  static createDOMElement(params) {
     return new this(params).element;
   }
 }

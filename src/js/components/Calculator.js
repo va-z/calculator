@@ -12,10 +12,7 @@ class Calculator extends Element {
     });
 
     this.screen = new Screen({ outerClassNames: [CALCULATOR_SCREEN] });
-    this.keyboard = new Keyboard({
-      outerClassNames: [CALCULATOR_KEYBOARD],
-      screen: this.screen,
-    });
+    this.keyboard = new Keyboard({ outerClassNames: [CALCULATOR_KEYBOARD] });
 
     this.element.append(this.screen.element, this.keyboard.element);
   }

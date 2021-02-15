@@ -11,13 +11,18 @@ $widthDesktopMin: 900px;
   --colorScreenHistoryBg: #64836d;
   --colorScreenFont: #223026;
 
-  --colorKeyBg: #f9fde4;
-  --colorKeyBgActive: #e9f89d;
   --colorKeyFont: #111111;
+  --colorKeyBg: #f9fde4;
+  --colorKeyBgHover: #e9f89d;
 
-  --colorKeyACBg: #2e2e2e;
-  --colorKeyACBgActive: #111111;
-  --colorKeyACFont: #ffffff;
+  --colorKeyBlackFont: #ffffff;
+  --colorKeyBlackBg: #2e2e2e;
+  --colorKeyBlackBgHover: #111111;
 
-  --shadowCalculator: 0px 0px 20px -5px rgba(black, 0.5);
+  --colorKeyGreenFont: #ffffff;
+  --colorKeyGreenBg: #124407;
+  --colorKeyGreenBgHover: #0b2905;
+
+  --shadowCalculator: 0px 0px 20px -10px #232323;
+  --shadowKeyActive: inset 0px 0px 10px -5px black;
 }

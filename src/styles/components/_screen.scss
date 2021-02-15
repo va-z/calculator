@@ -1,15 +1,18 @@
 .screen {
-  border-radius: 5px;
+  border-radius: 10px;
+  overflow: hidden;
   font-family: 'VT323', monospace;
   color: var(--colorScreenFont);
-}
 
-.screen__previous {
-  background-color: var(--colorScreenHistoryBg);
-  font-size: 20px;
-}
+  &__previous {
+    height: 30px;
+    background-color: var(--colorScreenHistoryBg);
+    font-size: 20px;
+  }
 
-.screen__previous {
-  background-color: var(--colorScreenBg);
-  font-size: 35px;
+  &__current {
+    height: 50px;
+    background-color: var(--colorScreenBg);
+    font-size: 35px;
+  }
 }
