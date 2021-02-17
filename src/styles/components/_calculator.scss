@@ -1,9 +1,9 @@
 .calculator {
   display: grid;
   grid: repeat(2, auto) / 1fr;
-  row-gap: 10px;
-  padding: 10px;
-  border-radius: 10px;
+  row-gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
 
   background-color: var(--colorCalculatorBg);
   box-shadow: var(--shadowCalculator);

@@ -1,6 +1,7 @@
 import Element from './Element';
 import Key from './Key';
 import keys from '../configs/keys';
+import { addValueToInputAC } from '../state/actionCreators';
 import cssClassNames from '../constants/cssClassNames';
 
 const { NUMBER_KEYS, OPERATOR_KEYS } = keys;
@@ -10,14 +11,14 @@ const generateKeys = (configsArr, wrapperClassName) => {
   const wrapper = Element.createDOMElement({ classNames: [wrapperClassName] });
 
   configsArr.forEach((obj) => {
-    wrapper.insertAdjacentElement('afterbegin', new Key(obj).element);
+    wrapper.appendChild(new Key(obj).element);
   });
 
   return wrapper;
 };
 
 class Keyboard extends Element {
-  constructor({ outerClassNames }) {
+  constructor({ outerClassNames, store }) {
     super({
       classNames: [...outerClassNames, KEYBOARD],
     });
@@ -25,14 +26,22 @@ class Keyboard extends Element {
     const numberKeysWrapper = generateKeys(NUMBER_KEYS, KEYBOARD_NUMBERS);
     const operatorKeysWrapper = generateKeys(OPERATOR_KEYS, KEYBOARD_OPERATORS);
 
-    numberKeysWrapper.addEventListener('click', (event) => {
-      const { value } = event.target.dataset;
+    numberKeysWrapper.addEventListener('click', ({ target }) => {
+      const { value } = target.dataset;
 
-      if (value === undefined) {
-        return;
+      if (value) {
+        store.dispatch(addValueToInputAC(value));
       }
+    });
 
-      console.log(value);
+    operatorKeysWrapper.addEventListener('click', ({ target }) => {
+      const { value } = target.dataset;
+
+      if (value && value !== '=') {
+        store.dispatch(addValueToInputAC(value));
+      } else {
+        console.log('equals pressed!');
+      }
     });
 
     this.element.append(numberKeysWrapper, operatorKeysWrapper);

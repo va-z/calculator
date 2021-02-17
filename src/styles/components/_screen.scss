@@ -1,18 +1,24 @@
 .screen {
-  border-radius: 10px;
   overflow: hidden;
   font-family: 'VT323', monospace;
   color: var(--colorScreenFont);
+  border-radius: 0.75rem;
+  text-align: right;
 
   &__previous {
-    height: 30px;
+    min-height: calc(1.5rem + 2 * 0.25rem);
+
     background-color: var(--colorScreenHistoryBg);
-    font-size: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0.25rem;
   }
 
   &__current {
-    height: 50px;
+    min-height: calc(3.25rem + 2 * 0.25rem);
     background-color: var(--colorScreenBg);
-    font-size: 35px;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+    padding: 0.25rem;
   }
 }

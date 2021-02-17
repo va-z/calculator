@@ -50,7 +50,5 @@
     "type": "git",
     "url": "git@github.com:taniarascia/webpack-boilerplate"
   },
-  "dependencies": {
-    "eslint-config-airbnb": "^18.2.1"
-  }
+  "dependencies": {}
 }
